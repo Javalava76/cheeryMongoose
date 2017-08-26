@@ -81,6 +81,7 @@ router.get("/news", function(req, res) {
     else {
       res.json(doc);
     }
+
   });
   });
 
