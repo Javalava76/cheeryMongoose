@@ -65,20 +65,31 @@ app.use(bodyParser.urlencoded({
 // Make public a static dir
 app.use(express.static("public"));
 
+
+var dbConnectionString = process.env.MONGODB_URI || "mongodb://localhost/3000";
 // Database configuration with mongoose
-mongoose.connect("mongodb://heroku_zrqs6cfg:ei86ms3okdal2io5o804c00jlm@ds161503.mlab.com:61503/heroku_zrqs6cfg");
-// mongoose.connect("mongodb://localhost/3000");
-const db = mongoose.connection;
-
-// Show any mongoose errors
-db.on("error", function(error) {
-  console.log("Mongoose Error: ", error);
+mongoose.connect(dbConnectionString, (error) => {
+  if(error) {
+    console.log(error);
+  }
+  else {
+    console.log("mongoose connection successful");
+  }
 });
+// // mongoose.connect("mongodb://localhost/3000");
+// const db = mongoose.connection;
 
-// Once logged in to the db through mongoose, log a success message
-db.once("open", function() {
-  console.log("Mongoose connection successful.");
-});
+// // Show any mongoose errors
+// db.on("error", function(error) {
+//   console.log("Mongoose Error: ", error);
+// });
+
+// // Once logged in to the db through mongoose, log a success message
+// db.once("open", function() {
+//   console.log("Mongoose connection successful.");
+// });
+
+
 
 
 // Routes
