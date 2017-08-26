@@ -1,0 +1,68 @@
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+body {
+  background-color: #B4BE58
+}
+
+h1 {
+    text-align: center;
+    color: #181010;
+    text-shadow: 10%;
+    font-family: 'Lobster', cursive;
+}
+
+h4 {
+  color: #F4F1F1;
+  text-shadow: 1px 1px #363030;
+}
+
+h5 {
+  color: #F4F1F1;
+  text-align: center;
+  text-shadow: 1px 1px #363030;
+}
+
+#wrapper {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+}
+
+#news {
+  display: inline-block;
+  overflow: auto;
+  width: 100%;
+  height: auto;
+}
+
+#comments {
+  float: right;
+  width: 30%;
+}
+
+textarea,
+input {
+  display: block;
+  width: 100%;
+  background-color: #FCF5C7;
+}
+
+input {
+  height: 36px;
+  font-size: 24px;
+}
+
+textarea {
+  height: 200px;
+  font-size: 18px;
+}
