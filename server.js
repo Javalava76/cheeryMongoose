@@ -63,7 +63,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/pitchforkNews");
+mongoose.connect("mongodb://heroku_zrqs6cfg:ei86ms3okdal2io5o804c00jlm@ds161503.mlab.com:61503/heroku_zrqs6cfg");
 const db = mongoose.connection;
 
 // Show any mongoose errors
